@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.board {
+    width: 350px;
+    height: 420px;
+    background-color: #eaeaea;
+}
+
+.board .row {
+    display: flex;
+}
+
+.board .cell {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #aaa;
+    display: block;
+    text-align: center;
+    line-height: 70px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+.board .cell.wrong {
+    background-color: #777;
+    color: #fff;
+}
+
+.board .cell.correct {
+    background-color: #070;
+    color: #fff;
+}
+
+.board .cell.semi-correct {
+    background-color: #770;
+    color: #fff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.controls>* {
+    display: block;
+    padding: 5px 10px;
+    /* margin: 10px auto; */
+}
+
+.controls .input {
+    flex-grow: 1;
+    margin-right: 10px;
+}
