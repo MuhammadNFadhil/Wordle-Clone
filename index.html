@@ -7,10 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle Clone</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="content">
+        <div class="info">
+            <h1>Guess the word!</h1>
+            <h3>-- It's a of 5-letters word!</h3>
+            <ul>
+                <li>
+                    <div class="clr wrong"></div>
+                    <span>Letter doesn't exist in the word.</span>
+                </li>
+                <li>
+                    <div class="clr semi-correct"></div>
+                    <span>Letter exists in the word but in a different place.</span>
+                </li>
+                <li>
+                    <div class="clr correct"></div>
+                    <span>Letter exists in the word in the same place.</span>
+                </li>
+            </ul>
+        </div>
         <div class="board" id="board">
             <div class="row">
                 <div class="cell"></div>
@@ -57,7 +79,7 @@
 
         </div>
         <div class="controls">
-            <input class="input" type="text" id="word" placeholder="Type you word..." />
+            <input class="input" type="text" id="word" placeholder="Type your guess..." />
             <button onclick="restart()">Restart</button>
         </div>
     </div>

@@ -12,11 +12,17 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Roboto Slab', serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
 }
 
 .board {
-    width: 350px;
-    height: 420px;
+    display: inline-block;
+    margin: auto;
     background-color: #eaeaea;
 }
 
@@ -25,45 +31,95 @@ body {
 }
 
 .board .cell {
-    width: 70px;
-    height: 70px;
-    border: 1px solid #aaa;
+    width: 78px;
+    height: 78px;
+    border: 1px solid #dbdbdb;
     display: block;
     text-align: center;
-    line-height: 70px;
+    line-height: 78px;
     font-size: 40px;
-    font-weight: bold;
+    /* font-weight: bold; */
     transition: background-color 0.5s ease;
 }
 
 .board .cell.wrong {
-    background-color: #777;
+    background-color: #aeaeae;
     color: #fff;
 }
 
 .board .cell.correct {
-    background-color: #070;
+    background-color: #179217;
     color: #fff;
 }
 
 .board .cell.semi-correct {
-    background-color: #770;
+    background-color: #a59c18;
     color: #fff;
 }
 
 .controls {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .controls>* {
     display: block;
-    padding: 5px 10px;
+    padding: 10px 10px;
+    font-size: 15px;
+    font-family: inherit;
     /* margin: 10px auto; */
 }
 
 .controls .input {
     flex-grow: 1;
     margin-right: 10px;
+}
+
+h3 {
+    /* text-align: center; */
+    margin-bottom: 10px;
+}
+
+
+.info {
+    margin-bottom: 20px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+li .clr {
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    margin-right: 10px;
+}
+
+li .clr.wrong {
+    background-color: #aeaeae;
+}
+
+li .clr.correct {
+    background-color: #179217;
+}
+
+li .clr.semi-correct {
+    background-color: #a59c18;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+
+    .cell {
+        width: 62px !important;
+        height: 62px !important;
+        line-height: 62px !important;
+    }
 }
