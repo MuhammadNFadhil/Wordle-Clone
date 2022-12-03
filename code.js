@@ -10,6 +10,7 @@ let gameOver = false;
 
 // UI Related ====================================
 const input = document.getElementById('word');
+
 input.addEventListener("keypress", function (event) {
 
     if (event.key === "Enter") {
@@ -84,6 +85,7 @@ function restart() {
     pickRandomWord();
     gameOver = false;
     updateUI();
+    input.focus();
 }
 
 function pickRandomWord() {
